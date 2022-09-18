@@ -27,7 +27,7 @@
               $insert = $model->insert();
 
           ?>
-          <form action="" method="post">
+          <form action="" method="post" >
             <div class="form-group">
               <label for="">Name</label>
               <input type="text" name="name" class="form-control">
@@ -39,6 +39,10 @@
             <div class="form-group">
               <label for="">Mobile No.</label>
               <input type="text" name="mobile" class="form-control">
+            </div>
+             <div class="form-group">
+                <strong>Image:</strong>
+                <input type="file" name="image" id="image" class="form-control" />  
             </div>
             <div class="form-group">
               <label for="">Address</label>

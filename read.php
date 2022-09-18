@@ -37,6 +37,7 @@
               <p>Name = <?php echo $row['name']; ?></p>
               <p>Email = <?php echo $row['email']; ?></p>
               <p>Mobile No. = <?php echo $row['phone']; ?></p>
+               <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['photo']); ?>" />
               <p>Address = <?php echo $row['address']; ?></p>
             </div>
           </div>

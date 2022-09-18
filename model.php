@@ -22,15 +22,19 @@ class Model{
   public function insert(){
 
 			if (isset($_POST['submit'])) {
-				if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) && isset($_POST['address'])) {
-					if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['mobile']) && !empty($_POST['address']) ) {
-						
+				if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) && isset($_POST['image']) && isset($_POST['address'])) {
+					if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['mobile']) && !empty($_POST['image'])&& !empty($_POST['address']) ) {
+						 
 						$name = $_POST['name'];
 						$phone = $_POST['mobile'];
 						$email = $_POST['email'];
 						$address = $_POST['address'];
 
-						$query = "INSERT INTO tbl_register (name,email,phone,address) VALUES ('$name','$email','$phone','$address')";
+                        $file = $_POST["image"]; 
+
+                    
+
+						$query = "INSERT INTO tbl_register (name,email,phone,photo,address) VALUES ('$name','$email','$phone','$file', '$address')";
 						if ($sql = $this->conn->query($query)) {
 							echo "<script>alert('records added successfully');</script>";
 							echo "<script>window.location.href = 'record.php';</script>";

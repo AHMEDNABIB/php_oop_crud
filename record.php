@@ -29,6 +29,7 @@
                             <th>Name</th>
                              <th>Email</th>
                             <th>Mobile No</th>
+                            <th>Photo</th>
                             <th>Address</th>
                             <th>Action</th>
                         </tr>
@@ -41,12 +42,16 @@
                         $rows = $model->fetch();
                         if (!empty($rows)) {
                         foreach($rows as $row){
+                           
                             ?>
                             <tr>
                               <td><?php echo $row['id']?></td>
                               <td><?php echo $row['name']?></td>
                               <td><?php echo $row['email']?></td>
                               <td><?php echo $row['phone']?></td>
+                              <td><img src="images/<?php  echo $row['photo'];?>" alt="Girl in a jacket" width="30" height="45"></td>
+ 
+                              
                               <td><?php echo $row['address']?></td>
                                <td>
                                 <button class ="btn btn-info"> 
