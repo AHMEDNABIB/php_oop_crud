@@ -33,7 +33,7 @@
                     
                     $data['id'] = $id;
                     $data['name'] = $_POST['name'];
-                    $data['mobile'] = $_POST['mobile'];
+                    $data['phone'] = $_POST['mobile'];
                     $data['email'] = $_POST['email'];
                     $data['address'] = $_POST['address'];
 
@@ -41,7 +41,7 @@
 
                     if($update){
                       echo "<script>alert('record update successfully');</script>";
-                      echo "<script>window.location.href = 'records.php';</script>";
+                      echo "<script>window.location.href = 'record.php';</script>";
                     }else{
                       echo "<script>alert('record update failed');</script>";
                       echo "<script>window.location.href = 'records.php';</script>";
@@ -66,7 +66,7 @@
             </div>
             <div class="form-group">
               <label for="">Mobile No.</label>
-              <input type="text" name="mobile" value="<?php echo $row['mobile']; ?>" class="form-control">
+              <input type="text" name="mobile" value="<?php echo $row['phone']; ?>" class="form-control">
             </div>
             <div class="form-group">
               <label for="">Address</label>

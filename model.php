@@ -89,7 +89,7 @@ class Model{
 
 			$data = null;
 
-			$query = "SELECT * FROM records WHERE id = '$id'";
+			$query = "SELECT * FROM tbl_register WHERE id = '$id'";
 			if ($sql = $this->conn->query($query)) {
 				while($row = $sql->fetch_assoc()){
 					$data = $row;
@@ -100,7 +100,7 @@ class Model{
 
 		public function update($data){
 
-			$query = "UPDATE records SET name='$data[name]', email='$data[email]', mobile='$data[mobile]', address='$data[address]' WHERE id='$data[id] '";
+			$query = "UPDATE tbl_register SET name='$data[name]', email='$data[email]', phone='$data[phone]', address='$data[address]' WHERE id='$data[id] '";
 
 			if ($sql = $this->conn->query($query)) {
 				return true;
