@@ -85,6 +85,30 @@ class Model{
         }
 
 
+        public function edit($id){
+
+			$data = null;
+
+			$query = "SELECT * FROM records WHERE id = '$id'";
+			if ($sql = $this->conn->query($query)) {
+				while($row = $sql->fetch_assoc()){
+					$data = $row;
+				}
+			}
+			return $data;
+		}
+
+		public function update($data){
+
+			$query = "UPDATE records SET name='$data[name]', email='$data[email]', mobile='$data[mobile]', address='$data[address]' WHERE id='$data[id] '";
+
+			if ($sql = $this->conn->query($query)) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+
 
 }
 
